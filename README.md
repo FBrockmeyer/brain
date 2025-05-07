@@ -8,10 +8,13 @@ is a lightweight `R` package to read `MRtrix3`’s [`.tck` tractography
 file
 format](https://mrtrix.readthedocs.io/en/dev/getting_started/image_data.html#tracks-file-format-tck).
 
-It currently provides a single function `read_brain`: - parses `.tck`
-files using base R only - is comparably fast, and  
-- returns a list containing - header information, and - streamline data
-as a list of matrices.
+It currently provides a single function `read.tck`:
+
+- Parses `.tck` files using base R only  
+- Is comparably fast, and  
+- Returns a list containing:
+  - Header information  
+  - Streamline data as a list of matrices
 
 ## Installation
 
