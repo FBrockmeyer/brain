@@ -1,0 +1,10 @@
+Package: brain
+Title: Imports MRtrix3 Tracks file format (.tck)
+Version: 0.0.0.9000
+Authors@R: 
+    person("Richard", "Brockmeyer", , "frmb@mailbox.org", role = c("aut", "cre"))
+Description: Currently it holds just one function `read.tck` which reads MRtrix3's Track file format (.tck).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2

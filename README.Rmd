@@ -1,0 +1,36 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# brain
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+`{brain}` currently ships a single function `read_brain()`, which reads in MRtrix3 TCK file format `.tck` and returns a list of length two containing header information as well as a list of matrices representing streamlines. The function is written in base R and comparable fast. 
+
+## Installation
+
+You can install the development version of `{brain}` like so:
+
+``` r
+devtools::install_github('FBrockmeyer/brain')
+```
+
+No CRAN. 
+
+## Example
+```{r example}
+tck_files = list.files(path='path/to/folder', pattern='.tck$', full.names=TRUE)
+L = lapply(tck_files, brain::read_brain) |> setNames(basename(tck_files))
+```
+
