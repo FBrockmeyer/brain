@@ -4,12 +4,14 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-`{brain}` is a lightweight R package to read MRtrix3’s .tck tractography
-file format. It currently provides a single function `read_brain`: -
-parses .tck files using base R only; - returns a list containing -
-header information, and - streamline data as a list of matrices.
+is a lightweight `R` package to read `MRtrix3`’s [`.tck` tractography
+file
+format](https://mrtrix.readthedocs.io/en/dev/getting_started/image_data.html#tracks-file-format-tck).
 
-Is comparably fast.
+It currently provides a single function `read_brain`: - parses `.tck`
+files using base R only - is comparably fast, and  
+- returns a list containing - header information, and - streamline data
+as a list of matrices.
 
 ## Installation
 
