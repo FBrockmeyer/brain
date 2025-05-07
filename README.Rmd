@@ -16,7 +16,14 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-`{brain}` currently ships a single function `read_brain()`, which reads in MRtrix3 TCK file format `.tck` and returns a list of length two containing header information as well as a list of matrices representing streamlines. The function is written in base R and comparable fast. 
+`{brain}` is a lightweight R package to read MRtrix3's .tck tractography file format.
+It currently provides a single function `read_brain`:
+    - parses .tck files using base R only;
+     - returns a list containing
+       - header information, and 
+       - streamline data as a list of matrices. 
+
+Is comparably fast. 
 
 ## Installation
 
@@ -29,8 +36,9 @@ devtools::install_github('FBrockmeyer/brain')
 No CRAN. 
 
 ## Example
-```{r example}
-tck_files = list.files(path='path/to/folder', pattern='.tck$', full.names=TRUE)
-L = lapply(tck_files, brain::read_brain) |> setNames(basename(tck_files))
-```
 
+```{r example, eval=FALSE}
+library(brain)
+tck_files = list.files(path='path/to/folder', pattern='.tck$', full.names=TRUE)
+L = lapply(tck_files, read_brain) |> setNames(basename(tck_files))
+```
