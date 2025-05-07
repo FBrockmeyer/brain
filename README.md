@@ -30,5 +30,5 @@ No CRAN.
 
 ``` r
 tck_files = list.files(path='path/to/folder', pattern='.tck$', full.names=TRUE)
-L = lapply(tck_files, brain:.read.tck) |> setNames(basename(tck_files))
+L = lapply(tck_files, brain::read.tck) |> setNames(basename(tck_files))
 ```
